@@ -27,7 +27,9 @@ Quran Tafseer Sqlite database (8 Arabic tafseer books) cloned from http://quran.
 
 
 # 
-Method to modify
+Method to modify<br>
+<for بن عاشور تعديل تفسير ءاية رقم 130 سورة 2 >
+<br>
 
 --------------------------------------------------------------------
 UPDATE Tafseer SET nass = 
