@@ -35,7 +35,6 @@ Method to modify<br>
 UPDATE Tafseer SET nass = 
 'ومن يرغب عن ملة إبراهيم إلا من سفه نفسه، ولقد اصطفيناه في الدنيا وإنه في الآخرة لمن الصالحين'
 WHERE tafseer = 6 AND sura ==2 AND ayah ==130; 
-SELECT * FROM Tafseer WHERE tafseer = 6 AND sura ==2 AND ayah ==130;
 ---------------------------------------------------------------------
 
 
