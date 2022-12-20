@@ -23,8 +23,8 @@ Quran Tafseer Sqlite database (8 Arabic tafseer books) cloned from http://quran.
 
 * "8"	"الوسيط لطنطاوي"	"waseet"
 
-
-# using https://tafsir.app/ibn-aashoor/2/141 to put tashkeel for Fatiha and 133 - 140 in Baqara
+# https://youtu.be/_Bqtv91a_D0
+# using https://tafsir.app/ibn-aashoor/2/141 <br>to put tashkeel for Fatiha and 133 - 140 in Baqara
 
 # 
 Method to modify<br>
