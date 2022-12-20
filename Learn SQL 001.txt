@@ -1,0 +1,58 @@
+From Sqlite Database
+file --> Open project -->
+E:\Prog\SQL DatabAse\Quran Tafseer Sqlite database\tafaseer.sqbpro
+
+you may receive , there is running project , stop it.
+
+under tab Database Structure
+you see tables
+	Ayah
+	Tafseer
+	Tafseer Name
+	....
+	
+	
+next File --> attach Database
+E:\Prog\SQL DatabAse\Quran Tafseer Sqlite database\quran.ar.tanweer.db
+
+specify its name quran_android
+
+under Execute SQL tab
+add following code
+
+
+CREATE TABLE data_num_row
+AS SELECT ROW_NUMBER() OVER() AS num_row,
+text
+FROM quran_android.data;
+SELECT * FROM data_num_row;
+
+now you create a new table contain two columns instead of one
+its name is
+				data_num_row
+				
+use this command to select row
+SELECT * FROM data_num_row WHERE num_row=1;		
+
+
+to update nass in tafseer table		
+SELECT text FROM data_num_row WHERE num_row=1;
+---الفاتحة
+UPDATE Tafseer SET nass = (SELECT text FROM data_num_row WHERE num_row=001) WHERE tafseer=6 AND sura ==1 AND ayah ==001;
+UPDATE Tafseer SET nass = (SELECT text FROM data_num_row WHERE num_row=002) WHERE tafseer=6 AND sura ==1 AND ayah ==002;
+UPDATE Tafseer SET nass = (SELECT text FROM data_num_row WHERE num_row=003) WHERE tafseer=6 AND sura ==1 AND ayah ==003;
+UPDATE Tafseer SET nass = (SELECT text FROM data_num_row WHERE num_row=004) WHERE tafseer=6 AND sura ==1 AND ayah ==004;
+UPDATE Tafseer SET nass = (SELECT text FROM data_num_row WHERE num_row=005) WHERE tafseer=6 AND sura ==1 AND ayah ==005;
+UPDATE Tafseer SET nass = (SELECT text FROM data_num_row WHERE num_row=006) WHERE tafseer=6 AND sura ==1 AND ayah ==006;
+UPDATE Tafseer SET nass = (SELECT text FROM data_num_row WHERE num_row=007) WHERE tafseer=6 AND sura ==1 AND ayah ==007;
+--- البقرة                                                             
+UPDATE Tafseer SET nass = (SELECT text FROM data_num_row WHERE num_row=008) WHERE tafseer=6 AND sura ==2 AND ayah ==001;
+UPDATE Tafseer SET nass = (SELECT text FROM data_num_row WHERE num_row=009) WHERE tafseer=6 AND sura ==2 AND ayah ==002;
+UPDATE Tafseer SET nass = (SELECT text FROM data_num_row WHERE num_row=010) WHERE tafseer=6 AND sura ==2 AND ayah ==003;
+UPDATE Tafseer SET nass = (SELECT text FROM data_num_row WHERE num_row=011) WHERE tafseer=6 AND sura ==2 AND ayah ==004;
+UPDATE Tafseer SET nass = (SELECT text FROM data_num_row WHERE num_row=012) WHERE tafseer=6 AND sura ==2 AND ayah ==005;
+UPDATE Tafseer SET nass = (SELECT text FROM data_num_row WHERE num_row=013) WHERE tafseer=6 AND sura ==2 AND ayah ==006;
+UPDATE Tafseer SET nass = (SELECT text FROM data_num_row WHERE num_row=014) WHERE tafseer=6 AND sura ==2 AND ayah ==007;
+UPDATE Tafseer SET nass = (SELECT text FROM data_num_row WHERE num_row=015) WHERE tafseer=6 AND sura ==2 AND ayah ==008;
+UPDATE Tafseer SET nass = (SELECT text FROM data_num_row WHERE num_row=016) WHERE tafseer=6 AND sura ==2 AND ayah ==009;
+UPDATE Tafseer SET nass = (SELECT text FROM data_num_row WHERE num_row=017) WHERE tafseer=6 AND sura ==2 AND ayah ==010;
